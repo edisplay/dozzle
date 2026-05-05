@@ -113,6 +113,34 @@ button:
 placeholder:
   search-containers: Search containers (⌘ + k, ⌃k)
   search: Search
+cloud-search:
+  containers-section: Containers
+  search-logs-for: Search logs for "{query}"
+  across-containers: indexed across all your containers
+  connect-to-enable: Connect Dozzle Cloud to search logs
+  enable-streaming-to-search: Enable Stream Logs to Cloud to search
+  open-container: open container
+  search-logs-shortcut: search logs
+  cloud-connected: Cloud connected
+  results-page-title: Logs search
+  no-results: No matching log lines.
+  search-failed: Cloud search failed.
+  search-empty-prompt: Type a query to search logs across your containers.
+  searching: Searching…
+  hits-count: "{n} hits"
+  window-suffix: in the last 14 days
+  hero-title-cloud: Search containers and logs
+  hero-title-plain: Search containers
+  hero-pill-indexed: Cloud index
+  modal-placeholder-cloud: Search containers and logs…
+  modal-placeholder-plain: Search containers…
+  col-time: Time
+  col-level: Level
+  col-container: Container
+  col-message: Message
+  container-removed: Container has been deleted
+  cta-settings: "Cloud settings"
+  container-removed-pill: removed
 settings:
   help-support: >
     Please support Dozzle by donating or sponsoring us on GitHub. Your contributions help us improve Dozzle for

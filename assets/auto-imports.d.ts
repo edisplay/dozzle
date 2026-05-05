@@ -54,6 +54,7 @@ declare global {
   const drawerContext: typeof import('./composable/drawer').drawerContext
   const eagerComputed: typeof import('@vueuse/core').eagerComputed
   const effectScope: typeof import('vue').effectScope
+  const escapeHtml: typeof import('./utils/index').escapeHtml
   const extendRef: typeof import('@vueuse/core').extendRef
   const flattenJSON: typeof import('./utils/index').flattenJSON
   const flattenJSONToMap: typeof import('./utils/index').flattenJSONToMap
@@ -68,6 +69,7 @@ declare global {
   const groupContainers: typeof import('./stores/settings').groupContainers
   const h: typeof import('vue').h
   const hashCode: typeof import('./utils/index').hashCode
+  const highlightSubstringInHtml: typeof import('./utils/index').highlightSubstringInHtml
   const hourStyle: typeof import('./stores/settings').hourStyle
   const ignorableWatch: typeof import('@vueuse/core').ignorableWatch
   const inject: typeof import('vue').inject
@@ -158,6 +160,7 @@ declare global {
   const stripVersion: typeof import('./utils/index').stripVersion
   const syncRef: typeof import('@vueuse/core').syncRef
   const syncRefs: typeof import('@vueuse/core').syncRefs
+  const syntaxHighlightJson: typeof import('./utils/index').syntaxHighlightJson
   const templateRef: typeof import('@vueuse/core').templateRef
   const throttledRef: typeof import('@vueuse/core').throttledRef
   const throttledWatch: typeof import('@vueuse/core').throttledWatch
@@ -168,6 +171,7 @@ declare global {
   const toRelativeTime: typeof import('./utils/index').toRelativeTime
   const toValue: typeof import('vue').toValue
   const triggerRef: typeof import('vue').triggerRef
+  const tryFormatJson: typeof import('./utils/index').tryFormatJson
   const tryOnBeforeMount: typeof import('@vueuse/core').tryOnBeforeMount
   const tryOnBeforeUnmount: typeof import('@vueuse/core').tryOnBeforeUnmount
   const tryOnMounted: typeof import('@vueuse/core').tryOnMounted
@@ -206,6 +210,7 @@ declare global {
   const useClipboardItems: typeof import('@vueuse/core').useClipboardItems
   const useCloned: typeof import('@vueuse/core').useCloned
   const useCloudConfig: typeof import('./composable/cloudConfig').useCloudConfig
+  const useCloudLogSearch: typeof import('./composable/cloudLogSearch').useCloudLogSearch
   const useColorMode: typeof import('@vueuse/core').useColorMode
   const useConfirmDialog: typeof import('@vueuse/core').useConfirmDialog
   const useContainerActions: typeof import('./composable/containerActions').useContainerActions
@@ -254,6 +259,7 @@ declare global {
   const useFocusWithin: typeof import('@vueuse/core').useFocusWithin
   const useFps: typeof import('@vueuse/core').useFps
   const useFullscreen: typeof import('@vueuse/core').useFullscreen
+  const useFuzzySearch: typeof import('./composable/fuzzySearch').useFuzzySearch
   const useGamepad: typeof import('@vueuse/core').useGamepad
   const useGeolocation: typeof import('@vueuse/core').useGeolocation
   const useGroupedStream: typeof import('./composable/eventStreams').useGroupedStream
@@ -406,6 +412,9 @@ declare global {
   // @ts-ignore
   export type { AlertFormOptions, ContainerResult } from './composable/alertForm'
   import('./composable/alertForm')
+  // @ts-ignore
+  export type { CloudLogHit } from './composable/cloudLogSearch'
+  import('./composable/cloudLogSearch')
   // @ts-ignore
   export type { DrawerWidth } from './composable/drawer'
   import('./composable/drawer')
@@ -637,6 +646,7 @@ declare module 'vue' {
     readonly useClipboardItems: UnwrapRef<typeof import('@vueuse/core')['useClipboardItems']>
     readonly useCloned: UnwrapRef<typeof import('@vueuse/core')['useCloned']>
     readonly useCloudConfig: UnwrapRef<typeof import('./composable/cloudConfig')['useCloudConfig']>
+    readonly useCloudLogSearch: UnwrapRef<typeof import('./composable/cloudLogSearch')['useCloudLogSearch']>
     readonly useColorMode: UnwrapRef<typeof import('@vueuse/core')['useColorMode']>
     readonly useConfirmDialog: UnwrapRef<typeof import('@vueuse/core')['useConfirmDialog']>
     readonly useContainerActions: UnwrapRef<typeof import('./composable/containerActions')['useContainerActions']>
@@ -685,6 +695,7 @@ declare module 'vue' {
     readonly useFocusWithin: UnwrapRef<typeof import('@vueuse/core')['useFocusWithin']>
     readonly useFps: UnwrapRef<typeof import('@vueuse/core')['useFps']>
     readonly useFullscreen: UnwrapRef<typeof import('@vueuse/core')['useFullscreen']>
+    readonly useFuzzySearch: UnwrapRef<typeof import('./composable/fuzzySearch')['useFuzzySearch']>
     readonly useGamepad: UnwrapRef<typeof import('@vueuse/core')['useGamepad']>
     readonly useGeolocation: UnwrapRef<typeof import('@vueuse/core')['useGeolocation']>
     readonly useGroupedStream: UnwrapRef<typeof import('./composable/eventStreams')['useGroupedStream']>
