@@ -255,6 +255,7 @@ notifications:
     http-webhook: HTTP Webhook
     dozzle-cloud: Dozzle Cloud
     edit: Edit
+    duplicate: Duplicate
     delete: Delete
   alert-form:
     create-title: Create Alert

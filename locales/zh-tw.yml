@@ -218,6 +218,7 @@ notifications:
     http-webhook: HTTP Webhook
     dozzle-cloud: Dozzle Cloud
     edit: 編輯
+    duplicate: 複製
     delete: 刪除
   alert-form:
     create-title: 建立警報

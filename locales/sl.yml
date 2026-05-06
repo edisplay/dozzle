@@ -220,6 +220,7 @@ notifications:
     http-webhook: HTTP Webhook
     dozzle-cloud: Dozzle Cloud
     edit: Uredi
+    duplicate: Podvoji
     delete: Izbriši
   alert-form:
     create-title: Ustvari Opozorilo

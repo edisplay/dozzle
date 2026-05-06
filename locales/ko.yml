@@ -218,6 +218,7 @@ notifications:
     http-webhook: HTTP 웹훅
     dozzle-cloud: Dozzle Cloud
     edit: 편집
+    duplicate: 복제
     delete: 삭제
   alert-form:
     create-title: 알림 만들기
