@@ -25,6 +25,7 @@ type Args struct {
 	AuthLogoutUrl    string              `arg:"--auth-logout-url,env:DOZZLE_AUTH_LOGOUT_URL" help:"sets the Logout URL used with Forward Proxy."`
 	EnableActions    bool                `arg:"--enable-actions,env:DOZZLE_ENABLE_ACTIONS" default:"false" help:"enables essential actions on containers from the web interface."`
 	EnableShell      bool                `arg:"--enable-shell,env:DOZZLE_ENABLE_SHELL" default:"false" help:"enables shell access to containers from the web interface."`
+	EnableMCP        bool                `arg:"--enable-mcp,env:DOZZLE_ENABLE_MCP" default:"false" help:"enables the MCP (Model Context Protocol) endpoint for LLM integration."`
 	DisableAvatars   bool                `arg:"--disable-avatars,env:DOZZLE_DISABLE_AVATARS" default:"false" help:"disables avatars for authenticated users."`
 	FilterStrings    []string            `arg:"env:DOZZLE_FILTER,--filter,separate" help:"filters docker containers using Docker syntax."`
 	Filter           map[string][]string `arg:"-"`
